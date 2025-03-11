@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="616.0" prefWidth="880.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javafx.Controller.HelloController">
+    <children>
+        <!-- Tabela do pracowników -->
+        <TableView fx:id="employeeTableView" layoutX="440.0" layoutY="202.0" prefHeight="327.0" prefWidth="415.0">
+            <columns>
+                <TableColumn fx:id="firstNameColumn" prefWidth="78.99998474121094" text="First Name" />
+                <TableColumn fx:id="lastNameColumn" prefWidth="84.60000610351562" text="Last Name" />
+                <TableColumn fx:id="birthDateColumn" prefWidth="78.60003662109375" text="Birth Date" />
+                <TableColumn fx:id="salaryColumn" prefWidth="73.4000244140625" text="Salary" />
+                <TableColumn fx:id="conditionColumn" prefWidth="97.79998779296875" text="Condition" />
+            </columns>
+        </TableView>
+
+        <!-- Formularz dodawania nowego pracownika -->
+        <TextField fx:id="employeeNameField" layoutX="440.0" layoutY="37.0" prefHeight="26.0" prefWidth="135.0" promptText="First Name" />
+        <TextField fx:id="employeeNameField1" layoutX="586.0" layoutY="37.0" prefHeight="26.0" prefWidth="147.0" promptText="Last Name" />
+        <DatePicker fx:id="employeeBirthDatePicker" layoutX="440.0" layoutY="78.0" prefHeight="26.0" prefWidth="135.0" />
+        <TextField fx:id="employeeSalaryField" layoutX="586.0" layoutY="78.0" prefHeight="26.0" prefWidth="147.0" promptText="Salary" />
+        <ComboBox fx:id="conditionComboBox" layoutX="440.0" layoutY="119.0" prefHeight="26.0" prefWidth="135.0" />
+
+        <!-- Przycisk dodawania pracownika -->
+        <Button layoutX="586.0" layoutY="119.0" onMouseClicked="#addEmployee" prefHeight="26.0" prefWidth="99.0" text="Add Employee" />
+
+        <!-- Formularz do dodawania grup -->
+        <TextField fx:id="groupNameField" layoutX="28.0" layoutY="78.0" prefWidth="200.0" promptText="Group Name" />
+        <TextField fx:id="maxEmployeesField" layoutX="28.0" layoutY="106.0" prefWidth="200.0" promptText="Max Employees" />
+
+        <!-- Przycisk dodawania grupy -->
+        <Button layoutX="28.0" layoutY="132.0" onMouseClicked="#addGroup" prefWidth="200.0" text="Add Group" />
+
+        <!-- ListView do wyświetlania grup -->
+        <ListView fx:id="groupListView" layoutX="238.0" layoutY="81.0" prefHeight="150.0" prefWidth="147.0" />
+
+        <!-- Przycisk usuwania grupy -->
+        <Button layoutX="28.0" layoutY="202.0" onMouseClicked="#removeGroup" prefWidth="200.0" text="Remove Group" />
+
+        <!-- PieChart do wizualizacji zapełnienia grupy -->
+        <PieChart fx:id="groupPieChart" layoutX="79.0" layoutY="318.0" prefHeight="245.0" prefWidth="318.0" />
+
+        <!-- Przycisk dodawania pracownika do grupy -->
+        <Button layoutX="28.0" layoutY="169.0" onMouseClicked="#addEmployeeToGroup" prefWidth="200.0" text="Add Employee to Group" />
+
+        <!-- Przycisk usuwania pracownika -->
+        <Button layoutX="700.0" layoutY="119.0" onMouseClicked="#removeEmployee" prefHeight="26.0" prefWidth="124.0" text="Remove Employee" />
+
+        <!-- Przycisk modyfikacji danych pracownika -->
+        <Button layoutX="440.0" layoutY="156.0" onMouseClicked="#modifyEmployeeData" prefWidth="135.0" text="Modify Employee" />
+
+        <!-- Przycisk zapisywania zmodyfikowanego pracownika -->
+        <Button layoutX="586.0" layoutY="156.0" onMouseClicked="#saveModifiedEmployeeData" prefHeight="26.0" prefWidth="99.0" text="Save Employee" />
+
+        <!-- Przycisk modyfikacji danych grupy -->
+        <Button layoutX="28.0" layoutY="231.0" onMouseClicked="#modifyGroupData" prefWidth="200.0" text="Modify Group" />
+
+        <!-- Przycisk zapisywania zmodyfikowanej grupy -->
+        <Button layoutX="28.0" layoutY="265.0" onMouseClicked="#saveModifiedGroupData" prefWidth="200.0" text="Save Group" />
+
+        <TextField fx:id="textFilterField" layoutX="745.0" layoutY="37.0" onAction="#onFilterTextChanged" prefHeight="26.0" prefWidth="124.0" promptText="Filter by Last Name" />
+        <Button layoutX="745.0" layoutY="78.0" onMouseClicked="#refreshTable" prefWidth="124.0" text="Refresh" />
+        <Button layoutX="238.0" layoutY="244.0" onMouseClicked="#searchGroupEmployees" prefWidth="147.0" text="Search Group" />
+
+
+
+    </children>
+</AnchorPane>

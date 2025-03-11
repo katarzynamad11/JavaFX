@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+
+<TableView fx:id="employeeTableView" prefHeight="300" prefWidth="600" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17.0.12">
+    <columns>
+        <TableColumn fx:id="firstNameColumn" prefWidth="118.0" text="First Name" />
+        <TableColumn fx:id="lastNameColumn" prefWidth="109.0" text="Last Name" />
+        <TableColumn fx:id="birthDateColumn" prefWidth="120.0" text="Birth Date" />
+        <TableColumn fx:id="salaryColumn" prefWidth="110.0" text="Salary" />
+        <TableColumn fx:id="conditionColumn" prefWidth="140.79998779296875" text="Condition" />
+    </columns>
+</TableView>

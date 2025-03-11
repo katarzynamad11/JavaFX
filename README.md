@@ -1,6 +1,7 @@
 # Employee Management System 
 
-### Project Description The Employee Management System is an application designed for managing employees, written in JavaFX and connected to a database. 
+### Project Description 
+The Employee Management System is an application designed for managing employees, written in JavaFX and connected to a database. 
 It allows users to add, edit, delete, and search for employees, as well as organize them into groups. 
 
 ### Technologies 
